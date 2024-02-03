@@ -1,4 +1,4 @@
-/**@type {import("prettier").Config} */
+/** @type {import("prettier").Config} */
 const prettierConfig = {
   printWidth: 100,
   tabWidth: 2,

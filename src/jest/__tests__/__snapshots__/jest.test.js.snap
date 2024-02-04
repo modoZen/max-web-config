@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Jest tests Should return prettier config values 1`] = `
+{
+  "collectCoverageFrom": [
+    "**/src/**/!(index|main|*.test|*.stub|*.mock).js",
+    "**/src/**/!(index|main|*.test|*.stub|*.mock).ts",
+    "**/src/**/!(index|main|*.test|*.stub|*.mock).tsx",
+    "!**/__mocks__/**",
+    "!**/__stubs__/**",
+    "!**/__tests__/**",
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100,
+    },
+  },
+  "resetMocks": true,
+  "setupFiles": [
+    "dotenv/config",
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/jest.setup.ts",
+  ],
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(js|ts|tsx)$": [
+      "@swc/jest",
+      {
+        "jsc": {
+          "transform": {
+            "react": {
+              "runtime": "automatic",
+            },
+          },
+        },
+      },
+    ],
+  },
+}
+`;

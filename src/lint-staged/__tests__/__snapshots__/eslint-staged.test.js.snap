@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lint Staged tests Should return lint staged config values 1`] = `
+{
+  "src/**/*.+(css|scss|sass)": [
+    "prettier --write",
+  ],
+  "src/**/*.{js,jsx,ts,tsx}": [
+    "eslint --fix",
+  ],
+}
+`;

@@ -1,6 +1,6 @@
 {
   "name": "max-web-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Library to config eslint, prittier, lint-staged and jest",
   "main": "src/index.js",
   "files": [

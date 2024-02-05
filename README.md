@@ -5,8 +5,10 @@ A library to configure your development tools.
 This library provides the Eslit, Prettier, Lint-staged and Jest configuration for proyects with
 TypeScript, React, Vite, SWC and Dotenv.
 
+# Table of Contents
+
 - [Development tools](#development-tools)
-- [Available Scripts](#available-scripts)
+- [Installation](#installation)
 
 ## Development tools
 
@@ -15,32 +17,34 @@ TypeScript, React, Vite, SWC and Dotenv.
 - Lint-staged and Husky
 - Jest
 
-## Available Scripts
+## Installation
 
-### npm run format
+```
+npm install --save-dev max-web-config
+```
 
-Runs formatter.
+## Usage
 
-### npm run lint
+### Prettier
 
-Runs linter.
+```js
+module.exports = require('max-web-config').getPrettierConfig();
+```
 
-### npm run test
+### Eslint
 
-Runs app tests in band.
+```js
+module.exports = require('max-web-config').getEslintConfig();
+```
 
-### npm run test:watch
+### Lint-staged
 
-Runs app tests in watch mode.
+```js
+module.exports = require('./src').getLintStagedConfig();
+```
 
-### npm run test:file
+### Jest
 
-Runs related tests of a test in watch mode.
-
-### npm run test:coverage
-
-Runs app tests, test coverage information should be collected and reported in the output.
-
-### npm run check
-
-Runs app tests in band, show test coverage information in the output.
+```js
+module.exports = require('./src').getJestConfig();
+```

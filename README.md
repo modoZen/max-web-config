@@ -45,6 +45,17 @@ module.exports = require('./src').getLintStagedConfig();
 
 ### Jest
 
+This is customizable
+
 ```js
-module.exports = require('./src').getJestConfig();
+module.exports = require('./src').getJestConfig({
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80,
+    },
+  },
+});
 ```

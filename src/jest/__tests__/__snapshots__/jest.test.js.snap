@@ -18,6 +18,9 @@ exports[`Jest tests Should return prettier config values 1`] = `
       "statements": 100,
     },
   },
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/src/$1",
+  },
   "resetMocks": true,
   "setupFiles": [
     "dotenv/config",

@@ -15,6 +15,8 @@ const defaultConfiguration = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
+  resetMocks: true,
+  testEnvironment: 'jsdom',
   coverageThreshold: {
     global: {
       branches: 100,
@@ -45,27 +47,7 @@ const defaultConfiguration = {
 const getJestConfig = (config = {}) => {
   const configuration = { ...defaultConfiguration, ...config };
 
-  const {
-    coverageThreshold,
-    collectCoverageFrom,
-    moduleNameMapper,
-    setupFiles,
-    setupFilesAfterEnv,
-    transform,
-    ...rest
-  } = configuration;
-
-  return {
-    collectCoverageFrom,
-    coverageThreshold,
-    resetMocks: true,
-    testEnvironment: 'jsdom',
-    setupFiles,
-    setupFilesAfterEnv,
-    moduleNameMapper,
-    transform,
-    ...rest,
-  };
+  return configuration;
 };
 
 module.exports = {

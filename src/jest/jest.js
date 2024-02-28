@@ -3,6 +3,7 @@ const extensions = ['js', 'ts', 'tsx'];
 const invalidFiles = ['index', 'main', '*.test', '*.stub', '*.mock'];
 const invalidDirectories = ['__mocks__', '__stubs__', '__tests__'];
 
+/** @type {import("jest").Config} */
 const defaultConfiguration = {
   collectCoverageFrom: [
     ...extensions.map(
@@ -44,10 +45,8 @@ const defaultConfiguration = {
 /**
  * @returns {import("jest").Config}
  * */
-const getJestConfig = (config = {}) => {
-  const configuration = { ...defaultConfiguration, ...config };
-
-  return configuration;
+const getJestConfig = () => {
+  return defaultConfiguration;
 };
 
 module.exports = {

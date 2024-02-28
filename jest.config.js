@@ -1,5 +1,8 @@
 /* eslint-disable global-require */
-module.exports = require('./src').getJestConfig({
+const jestConfig = require('./src').getJestConfig();
+
+module.exports = {
+  ...jestConfig,
   setupFiles: undefined,
   setupFilesAfterEnv: undefined,
-});
+};

@@ -9,6 +9,7 @@ TypeScript, React, Vite, SWC and Dotenv.
 
 - [Development tools](#development-tools)
 - [Installation](#installation)
+- [Usage](#usage)
 
 ## Development tools
 
